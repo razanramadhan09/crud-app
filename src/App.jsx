@@ -14,10 +14,7 @@ const App = () => {
     const savedData = localStorage.getItem('mahasiswaData');
     if (savedData) {
       setMahasiswaList(JSON.parse(savedData));
-    } else {
-      setMahasiswaList(initialData);
-      localStorage.setItem('mahasiswaData', JSON.stringify(initialData));
-    }
+    } 
   }, []);
 
   // Simpan data ke localStorage setiap kali ada perubahan
